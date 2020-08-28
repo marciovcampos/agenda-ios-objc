@@ -37,7 +37,7 @@
     contato.telefone = self.telefone.text;
     contato.site = self.site.text;
     
-    [self.dao.contatos addObject:contato];
+    [self.dao adicionaContato:contato];
     
     NSLog(@"%@", self.dao.contatos);
     

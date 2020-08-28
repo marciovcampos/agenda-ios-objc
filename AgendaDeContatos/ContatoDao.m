@@ -18,4 +18,16 @@
     return self;
 }
 
+-(void) adicionaContato:(Contato *)contato{
+    [self.contatos addObject:contato];
+}
+
+-(NSInteger) total {
+    return self.contatos.count;
+}
+
+-(Contato *) contatoDoIndice:(NSInteger) indice{
+    return self.contatos[indice];
+}
+
 @end

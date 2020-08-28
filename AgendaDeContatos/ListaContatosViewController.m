@@ -32,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dao.contatos.count;
+    return [self.dao total];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,7 +45,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
     }
        
-    Contato *contato = self.dao.contatos[indexPath.row];
+    Contato *contato = [self.dao contatoDoIndice: indexPath.row];
     cell.textLabel.text = contato.nome;
     
     return cell;
