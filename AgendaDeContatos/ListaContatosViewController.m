@@ -10,4 +10,14 @@
 
 @implementation ListaContatosViewController
 
+-(ListaContatosViewController *) init {
+    self = [super init];
+    
+    UIBarButtonItem *botaoForm = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:nil];
+    
+    self.navigationItem.rightBarButtonItem = botaoForm;
+    
+    return self;
+}
+
 @end
