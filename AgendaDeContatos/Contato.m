@@ -10,14 +10,4 @@
 
 @implementation Contato
 
-NSString *nome;
-
--(void) setNome:(NSString *)novoNome {
-    nome = novoNome;
-}
-
--(NSString *)nome{
-    return nome;
-}
-
 @end
