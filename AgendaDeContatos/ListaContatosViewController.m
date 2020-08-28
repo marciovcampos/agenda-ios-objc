@@ -19,9 +19,23 @@
     
     self.navigationItem.rightBarButtonItem = botaoForm;
     self.navigationItem.title = @"Contatos";
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
     self.dao = [ContatoDao contatoDaoInstance];
     
     return self;
+}
+
+-(void) tableView:(nonnull UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        
+        Contato *contato = [self.dao contatoDoIndice:indexPath.row];
+        
+        [self.dao removeContato: contato];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 -(void) exibeFormulario {

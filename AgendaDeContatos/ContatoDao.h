@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger) total;
 - (Contato *) contatoDoIndice: (NSInteger) indice;
 + (ContatoDao *) contatoDaoInstance;
+- (void) removeContato:(Contato *) contato;
 
 @end
 
