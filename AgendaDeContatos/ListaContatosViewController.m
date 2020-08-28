@@ -11,12 +11,13 @@
 
 @implementation ListaContatosViewController
 
--(ListaContatosViewController *) init {
+-(id) init {
     self = [super init];
     
     UIBarButtonItem *botaoForm = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(exibeFormulario)];
     
     self.navigationItem.rightBarButtonItem = botaoForm;
+    self.navigationItem.title = @"Contatos";
     
     return self;
 }
