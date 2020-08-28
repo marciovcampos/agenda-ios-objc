@@ -26,6 +26,8 @@
     
     NSLog(@"Dados do Contato %@ - %@ - %@ - %@ - %@", contato.nome, contato.endereco, contato.email, contato.telefone, contato.site);
     
+    [self.navigationController popViewControllerAnimated:true];
+    
 }
 
 @end
