@@ -37,8 +37,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    NSString *identificador = @"Celula";
     
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identificador];
+    
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
+    }
+       
     Contato *contato = self.contatos[indexPath.row];
     cell.textLabel.text = contato.nome;
     
