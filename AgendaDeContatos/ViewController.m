@@ -22,7 +22,7 @@
     if (self) {
         UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adiciona)];
           self.navigationItem.rightBarButtonItem = botao;
-          self.navigationItem.title = @"Novo Contato";
+          self.navigationItem.title = @"Novo Contato";    
     }
     return self;
     
@@ -37,7 +37,9 @@
     contato.telefone = self.telefone.text;
     contato.site = self.site.text;
     
-    NSLog(@"Dados do Contato %@ - %@ - %@ - %@ - %@", contato.nome, contato.endereco, contato.email, contato.telefone, contato.site);
+    [self.contatos addObject:contato];
+    
+    NSLog(@"%@", self.contatos);
     
     [self.navigationController popViewControllerAnimated:true];
     
