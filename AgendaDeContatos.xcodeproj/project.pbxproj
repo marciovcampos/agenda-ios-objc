@@ -15,6 +15,7 @@
 		80227D7D24F85D2300AC0C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80227D7B24F85D2300AC0C22 /* LaunchScreen.storyboard */; };
 		80227D8024F85D2300AC0C22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80227D7F24F85D2300AC0C22 /* main.m */; };
 		80A910D724F949A400923650 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A910D624F949A400923650 /* Contato.m */; };
+		80A910DA24F94FDB00923650 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A910D924F94FDB00923650 /* ListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		80227D7F24F85D2300AC0C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80A910D524F949A400923650 /* Contato.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		80A910D624F949A400923650 /* Contato.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		80A910D824F94FDB00923650 /* ListaContatosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		80A910D924F94FDB00923650 /* ListaContatosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				80A910D524F949A400923650 /* Contato.h */,
 				80A910D624F949A400923650 /* Contato.m */,
 				80227D7624F85D1B00AC0C22 /* Main.storyboard */,
+				80A910D824F94FDB00923650 /* ListaContatosViewController.h */,
+				80A910D924F94FDB00923650 /* ListaContatosViewController.m */,
 				80227D7924F85D2300AC0C22 /* Assets.xcassets */,
 				80227D7B24F85D2300AC0C22 /* LaunchScreen.storyboard */,
 				80227D7E24F85D2300AC0C22 /* Info.plist */,
@@ -152,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A910D724F949A400923650 /* Contato.m in Sources */,
+				80A910DA24F94FDB00923650 /* ListaContatosViewController.m in Sources */,
 				80227D7524F85D1B00AC0C22 /* ViewController.m in Sources */,
 				80227D6F24F85D1B00AC0C22 /* AppDelegate.m in Sources */,
 				80227D8024F85D2300AC0C22 /* main.m in Sources */,
