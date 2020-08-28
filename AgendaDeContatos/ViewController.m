@@ -22,7 +22,8 @@
     if (self) {
         UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adiciona)];
           self.navigationItem.rightBarButtonItem = botao;
-          self.navigationItem.title = @"Novo Contato";    
+          self.navigationItem.title = @"Novo Contato";
+        self.dao = [ContatoDao contatoDaoInstance];
     }
     return self;
     
