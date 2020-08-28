@@ -18,8 +18,10 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     ListaContatosViewController *lista = [ListaContatosViewController new];
-
-    self.window.rootViewController = lista;
+    
+    UINavigationController *navLista = [[UINavigationController alloc ] initWithRootViewController:lista];
+    
+    self.window.rootViewController = navLista;
 }
 
 
