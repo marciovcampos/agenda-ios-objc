@@ -94,6 +94,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.linhaSelecionada inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    self.linhaSelecionada = -1;
 }
 
 @end
