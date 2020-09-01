@@ -7,7 +7,6 @@
 //
 
 #import "ListaContatosViewController.h"
-#import "ViewController.h"
 #import "Contato.h"
 
 @implementation ListaContatosViewController
@@ -47,6 +46,8 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"Form-Contato"];
     
+    form.delegate = self;
+    
     if(self.contatoSelecionado){
         form.contato = self.contatoSelecionado;
     }
@@ -79,5 +80,14 @@
 - (void) viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
 }
+
+-(void) contatoAdicionado: (Contato *) contato {
+    NSLog(@"Adicionado: %@", contato.nome);
+}
+
+-(void) contatoAtualizado: (Contato *) contato {
+    NSLog(@"Atualizado: %@", contato.nome);
+}
+
 
 @end

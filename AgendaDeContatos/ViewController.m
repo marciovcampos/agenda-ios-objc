@@ -52,7 +52,9 @@
     self.contato = [Contato new];
     
     [self pegaDadosDoFormulario];
-    [self.dao adicionaContato:self.contato];
+    [self.dao adicionaContato:self.contato];    
+    
+    [self.delegate contatoAdicionado: self.contato];
     
     [self.navigationController popViewControllerAnimated:true];
     
@@ -60,6 +62,8 @@
 
 - (void) altera {
     [self pegaDadosDoFormulario];
+    
+    [self.delegate contatoAtualizado: self.contato];
     
     [self.navigationController popViewControllerAnimated:true];
 }
