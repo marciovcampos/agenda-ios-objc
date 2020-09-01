@@ -29,6 +29,18 @@
     
 }
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    
+    if(self.contato){
+        self.nome.text = self.contato.nome;
+        self.endereco.text = self.contato.endereco;
+        self.email.text = self.contato.email;
+        self.telefone.text = self.contato.telefone;
+        self.site.text = self.contato.site;
+    }    
+}
+
 - (void) adiciona {
     
     Contato *contato = [Contato new];
