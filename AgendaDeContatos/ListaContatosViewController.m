@@ -50,6 +50,7 @@
     if(self.contatoSelecionado){
         form.contato = self.contatoSelecionado;
     }
+    self.contatoSelecionado = nil;
     
     [self.navigationController pushViewController:form animated:true];
 }
