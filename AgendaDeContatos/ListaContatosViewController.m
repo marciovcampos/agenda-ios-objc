@@ -14,14 +14,18 @@
 -(id) init {
     self = [super init];
     
-    UIBarButtonItem *botaoForm = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(exibeFormulario)];
-    
-    self.navigationItem.rightBarButtonItem = botaoForm;
-    self.navigationItem.title = @"Contatos";
-    
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    self.dao = [ContatoDao contatoDaoInstance];
+    if(self){
+      UIBarButtonItem *botaoForm = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(exibeFormulario)];
+          
+      self.navigationItem.rightBarButtonItem = botaoForm;
+      self.navigationItem.title = @"Contatos";
+      
+      self.navigationItem.leftBarButtonItem = self.editButtonItem;
+      self.linhaSelecionada = -1;
+      
+      self.dao = [ContatoDao contatoDaoInstance];
+    }
+  
     
     return self;
 }
@@ -83,6 +87,14 @@
 
 -(void) contatoAdicionado: (Contato *) contato {
     self.linhaSelecionada = [self.dao indiceDoContato:contato];
+    
+    NSString *mensagem = [NSString stringWithFormat:@"Contato %@ adicionado com sucesso", contato.nome];
+    UIAlertController *alerta = [UIAlertController alertControllerWithTitle:@"Contato adicionado" message: mensagem preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+    [alerta addAction:ok];
+    
+    [self presentViewController:alerta animated:YES completion:nil];
+    
     NSLog(@"Adicionado: %@", contato.nome);
 }
 
