@@ -14,6 +14,7 @@
 
 @property ContatoDao *dao;
 @property Contato *contatoSelecionado;
+@property NSInteger linhaSelecionada;
 
 @end
 

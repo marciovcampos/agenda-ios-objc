@@ -82,12 +82,18 @@
 }
 
 -(void) contatoAdicionado: (Contato *) contato {
+    self.linhaSelecionada = [self.dao indiceDoContato:contato];
     NSLog(@"Adicionado: %@", contato.nome);
 }
 
 -(void) contatoAtualizado: (Contato *) contato {
+    self.linhaSelecionada = [self.dao indiceDoContato:contato];
     NSLog(@"Atualizado: %@", contato.nome);
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.linhaSelecionada inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+}
 
 @end
